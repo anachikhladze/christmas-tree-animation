@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct AcademyAnimationView: View {
+    
+    // MARK: - Properties
     @State private var isAnimating = false
     
+    // MARK: - Body
     var body: some View {
         ZStack {
             Text("TBC IT Academy")
@@ -23,13 +26,14 @@ struct AcademyAnimationView: View {
             
                 .onAppear() {
                     withAnimation(.easeInOut(duration: 2).repeatForever(autoreverses: true)) {
-                        self.isAnimating = true
+                        isAnimating = true
                     }
                 }
         }
     }
 }
 
+// MARK: - Preview
 #Preview {
     AcademyAnimationView()
 }

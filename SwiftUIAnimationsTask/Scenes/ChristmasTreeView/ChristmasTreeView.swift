@@ -10,15 +10,18 @@ import EffectsLibrary
 
 struct ChristmasTreeView: View {
     
+    // MARK: - Properties
     @State private var isSpinning = false
     
+    // MARK: - Body
     var body: some View {
         ZStack {
             Color(.black)
                 .edgesIgnoringSafeArea(.all)
+            
             VStack {
                 AcademyAnimationView()
-
+                
                 Image(systemName: "wand.and.stars.inverse")
                     .font(.system(size: 64))
                     .foregroundStyle(EllipticalGradient(
@@ -241,6 +244,7 @@ struct ChristmasTreeView: View {
 }
 
 
+// MARK: - Preview
 #Preview {
-ChristmasTreeView()
+    ChristmasTreeView()
 }
